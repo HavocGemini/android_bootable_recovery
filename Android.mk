@@ -501,11 +501,9 @@ else
 endif
 endif
 ifeq ($(TARGET_USERIMAGES_USE_F2FS), true)
-ifeq ($(shell test $(CM_PLATFORM_SDK_VERSION) -ge 3; echo $$?),0)
     LOCAL_REQUIRED_MODULES += \
         fsck.f2fs \
         mkfs.f2fs
-endif
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 28; echo $$?),0)
     LOCAL_REQUIRED_MODULES += sload.f2fs
 endif
