@@ -72,7 +72,8 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_CFLAGS := \
     -Wall \
-    -Werror
+    -Werror \
+    -Wno-unused-parameter
 
 ifeq ($(BOARD_SUPPRESS_EMMC_WIPE),true)
     LOCAL_CFLAGS += -DSUPPRESS_EMMC_WIPE
